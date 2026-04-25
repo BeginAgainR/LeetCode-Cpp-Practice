@@ -15,7 +15,7 @@ public:
         }
 
         int max_Length = 0;
-        for (auto num: st){  // unordered_set 不能改变其中的值，所以不可以有引用 && 应该遍历的是 st 
+        for (auto &num: nums){
             if(st.count(num - 1) != 1){
                 int cur_Length = 1;  // 当前是 1
                 while(st.count(num + 1)){
